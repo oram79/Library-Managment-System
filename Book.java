@@ -1,4 +1,3 @@
-// Book.java
 
 public class Book extends LibraryItem {
     private String format; // Printed, Electronic, Audio
