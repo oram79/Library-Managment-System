@@ -1,4 +1,4 @@
-// Employee.java
+// Employee Class
 
 public class Employee extends Patron {
     private String employeeID;
