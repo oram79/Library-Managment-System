@@ -28,8 +28,8 @@ public class Author {
 
     // Display the author details and the items they've written //
     public void displayAuthorDetails() {
-        System.out.println("Author: " + name + ", Date of Birth: " + dateOfBirth);
-        System.out.println("Written Items: ");
+        System.out.println("Author:" + name + ", Date of Birth: " + dateOfBirth);
+        System.out.println("Written Items:");
         for (LibraryItem item : writtenItems) {
             item.displayDetails();
         }

@@ -20,8 +20,7 @@ public class Demo {
             System.out.println("------------------------------");
             System.out.println(" 8. Exit ");
             System.out.println();
-            System.out.println(" Enter Your Choice: ");
-            
+            System.out.println("Enter Your Choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -52,27 +51,27 @@ public class Demo {
                     scanner.close();
                     System.exit(0);
                 default:
-                    System.out.println(" Invalid Choice. Please Try Again ");
+                    System.out.println("Invalid Choice. Please Try Again");
             }
         }
     }
 
     // Method To Add A Library Item //
     private static void addLibraryItem(Library library, Scanner scanner){
-        System.out.println(" Enter Type Of Item (Book/Periodical): ");
+        System.out.println("Enter Type Of Item (Book/Periodical): ");
         String type = scanner.nextLine();
 
-        System.out.print(" Enter ID: ");
+        System.out.print("Enter ID: ");
         String id = scanner.nextLine();
-        System.out.println(" Enter Title: ");
+        System.out.println("Enter Title: ");
         String title = scanner.nextLine();
-        System.out.println(" Enter Author: ");
+        System.out.println("Enter Author: ");
         String author = scanner.nextLine();
-        System.out.println(" Enter ISBN: ");
+        System.out.println("Enter ISBN: ");
         String isbn = scanner.nextLine();
-        System.out.println(" Enter Publisher Name: ");
+        System.out.println("Enter Publisher Name: ");
         String publisher = scanner.nextLine();
-        System.out.println(" Enter Number Of Copies: ");
+        System.out.println("Enter Number Of Copies: ");
         int numberOfCopies = scanner.nextInt();
         scanner.nextLine();
 
@@ -90,77 +89,77 @@ public class Demo {
             System.out.println("Invalid Item Type.");
         }
 
-        System.out.println(" Library Item Added Successfully! ");
+        System.out.println("Library Item Added Successfully!");
     }
 
     // Method To Add A Author //
     private static void addAuthor(Library library, Scanner scanner) {
-        System.out.println(" Enter Author Name: ");
+        System.out.println("Enter Author Name: ");
         String name = scanner.nextLine();
-        System.out.println(" Enter Date Of Birth (YYYY-MM-DD): ");
+        System.out.println("Enter Date Of Birth (YYYY-MM-DD): ");
         String dob = scanner.nextLine();
 
         Author author = new Author(name, dob);
         library.addAuthor(author);
 
-        System.out.println(" Author Added Successfully! ");
+        System.out.println("Author Added Successfully!");
     }
 
     // Method to add a patron
     private static void addPatron(Library library, Scanner scanner) {
-        System.out.print(" Enter Patron Type (Student/Employee): ");
+        System.out.print("Enter Patron Type (Student/Employee): ");
         String type = scanner.nextLine();
-        System.out.print(" Enter Name: ");
+        System.out.print("Enter Name: ");
         String name = scanner.nextLine();
-        System.out.print(" Enter Address: ");
+        System.out.print("Enter Address: ");
         String address = scanner.nextLine();
-        System.out.print(" Enter Phone Number: ");
+        System.out.print("Enter Phone Number: ");
         String phoneNumber = scanner.nextLine();
 
-        if (type.equalsIgnoreCase(" Student ")) {
-            System.out.print(" Enter Student ID: ");
+        if (type.equalsIgnoreCase("Student")) {
+            System.out.print("Enter Student ID: ");
             String studentID = scanner.nextLine();
             Patron student = new Student(name, address, phoneNumber, studentID);
             library.addPatron(student);
-        } else if (type.equalsIgnoreCase(" Employee ")) {
-            System.out.print(" Enter Employee ID: ");
+        } else if (type.equalsIgnoreCase("Employee")) {
+            System.out.print("Enter Employee ID: ");
             String employeeID = scanner.nextLine();
             Patron employee = new Employee(name, address, phoneNumber, employeeID);
             library.addPatron(employee);
         } else {
-            System.out.println(" Invalid Patron Type ");
+            System.out.println("Invalid Patron Type");
         }
 
-        System.out.println(" Patron Added Successfully! ");
+        System.out.println("Patron Added Successfully!");
     }
 
     // Method to borrow an item
     private static void borrowItem(Library library, Scanner scanner) {
-        System.out.print(" Enter The Title Of The Item To Borrow: ");
+        System.out.print("Enter The Title Of The Item To Borrow: ");
         String title = scanner.nextLine();
-        System.out.print(" Enter The Patron's Name: ");
+        System.out.print("Enter The Patron's Name: ");
         String patronName = scanner.nextLine();
 
         Patron patron = library.getPatronByName(patronName);  // Assuming a method to get a patron by name
         if (patron != null) {
             library.borrowedItem(title, patron);
         } else {
-            System.out.println(" Patron Not Found? ");
+            System.out.println("Patron Not Found?");
         }
     }
 
     // Method to return an item
     private static void returnItem(Library library, Scanner scanner) {
-        System.out.print(" Enter The Title Of The Item To Return: ");
+        System.out.print("Enter The Title Of The Item To Return: ");
         String title = scanner.nextLine();
-        System.out.print(" Enter the patron's name: ");
+        System.out.print("Enter the patron's name: ");
         String patronName = scanner.nextLine();
 
         Patron patron = library.getPatronByName(patronName);  // Assuming a method to get a patron by name
         if (patron != null) {
             library.returnItem(title, patron);
         } else {
-            System.out.println(" Patron not found? ");
+            System.out.println("Patron not found?");
         }
     }
 
