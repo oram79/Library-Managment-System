@@ -1,9 +1,9 @@
-// Employee Class
+// Employee Class //
 
 public class Employee extends Patron {
     private String employeeID;
 
-    // Constructor
+    // Constructor //
     public Employee(String name, String address, String phoneNumber, String employeeID) {
         super(name, address, phoneNumber);
         this.employeeID = employeeID;

@@ -1,3 +1,5 @@
+// LibraryItem.java //
+
 public abstract class LibraryItem {
     private String id;
     private String title;
