@@ -57,7 +57,7 @@ public class Demo {
         }
     }
 
-    // Method To Add A Libary Item //
+    // Method To Add A Library Item //
     private static void addLibraryItem(Library library, Scanner scanner){
         System.out.println(" Enter Type Of Item (Book/Periodical): ");
         String type = scanner.nextLine();
