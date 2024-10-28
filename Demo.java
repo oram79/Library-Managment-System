@@ -5,9 +5,6 @@ public class Demo {
         Library library = new Library();
         Scanner scanner = new Scanner(System.in);
 
-        // Preload some sample data
-        preloadData(library);
-
         // Infinite loop for the menu system
         while (true) {
             System.out.println("\n--- Logan's Library System ---");
@@ -54,5 +51,41 @@ public class Demo {
                     System.out.println(" Invalid Choice. Please Try Again ");
             }
         }
+    }
+
+    // Method To Add A Libary Item //
+    private static void addLibraryItem(Library library, Scanner scanner){
+        System.out.println(" Enter Type Of Item (Book/Periodical): ");
+        String type = scanner.nextLine();
+
+        System.out.print(" Enter ID: ");
+        String id = scanner.nextLine();
+        System.out.println(" Enter Title: ");
+        String title = scanner.nextLine();
+        System.out.println(" Enter Author: ");
+        String author = scanner.nextLine();
+        System.out.println(" Enter ISBN: ");
+        String isbn = scanner.nextLine();
+        System.out.println(" Enter Publisher Name: ");
+        String publisher = scanner.nextLine();
+        System.out.println(" Enter Number Of Copies: ");
+        int numberOfCopies = scanner.nextInt();
+        scanner.nextLine();
+
+        if (type.equalsIgnoreCase("Book")) {
+            System.out.print("Enter Format (Printed/Electronic/Audio): ");
+            String format = scanner.nextLine();
+            Book book = new Book(id, title, author, isbn, publisher, numberOfCopies, format);
+            library.addItem(book);
+        } else if (type.equalsIgnoreCase("Periodical")) {
+            System.out.print("Enter Type (Printed/Electronic): ");
+            String periodicalType = scanner.nextLine();
+            Periodical periodical = new Periodical(id, title, author, isbn, publisher, numberOfCopies, periodicalType);
+            library.addItem(periodical);
+        } else {
+            System.out.println("Invalid Item Type.");
+        }
+
+        System.out.println("Library Item Added Successfully!");
     }
 }
