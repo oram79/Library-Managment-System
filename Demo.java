@@ -86,6 +86,47 @@ public class Demo {
             System.out.println("Invalid Item Type.");
         }
 
-        System.out.println("Library Item Added Successfully!");
+        System.out.println(" Library Item Added Successfully! ");
+    }
+
+    // Method To Add A Author //
+    private static void addAuthor(Library library, Scanner scanner) {
+        System.out.println(" Enter Author Name: ");
+        String name = scanner.nextLine();
+        System.out.println(" Enter Date Of Birth (YYYY-MM-DD): ");
+        String dob = scanner.nextLine();
+
+        Author author = new Author(name, dob);
+        library.addAuthor(author);
+
+        System.out.println(" Author Added Successfully! ");
+    }
+
+    // Method to add a patron
+    private static void addPatron(Library library, Scanner scanner) {
+        System.out.print(" Enter Patron Type (Student/Employee): ");
+        String type = scanner.nextLine();
+        System.out.print(" Enter Name: ");
+        String name = scanner.nextLine();
+        System.out.print(" Enter Address: ");
+        String address = scanner.nextLine();
+        System.out.print(" Enter Phone Number: ");
+        String phoneNumber = scanner.nextLine();
+
+        if (type.equalsIgnoreCase(" Student ")) {
+            System.out.print(" Enter Student ID: ");
+            String studentID = scanner.nextLine();
+            Patron student = new Student(name, address, phoneNumber, studentID);
+            library.addPatron(student);
+        } else if (type.equalsIgnoreCase(" Employee ")) {
+            System.out.print(" Enter Employee ID: ");
+            String employeeID = scanner.nextLine();
+            Patron employee = new Employee(name, address, phoneNumber, employeeID);
+            library.addPatron(employee);
+        } else {
+            System.out.println(" Invalid Patron Type ");
+        }
+
+        System.out.println(" Patron Added Successfully! ");
     }
 }
