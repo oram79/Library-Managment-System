@@ -7,7 +7,9 @@ public class Demo {
 
         // Infinite loop for the menu system
         while (true) {
+            System.out.println();
             System.out.println("\n--- Logan's Library System ---");
+            System.out.println("------------------------------");
             System.out.println(" 1. Add Library Item ");
             System.out.println(" 2. Add Author ");
             System.out.println(" 3. Add Patron ");
@@ -15,7 +17,9 @@ public class Demo {
             System.out.println(" 5. Return Item ");
             System.out.println(" 6. Display Library Items ");
             System.out.println(" 7. Display Patrons ");
+            System.out.println("------------------------------");
             System.out.println(" 8. Exit ");
+            System.out.println();
             System.out.println(" Enter Your Choice: ");
             
             int choice = scanner.nextInt();
@@ -158,5 +162,15 @@ public class Demo {
         } else {
             System.out.println(" Patron not found? ");
         }
+    }
+
+    // Method to display all library items
+    private static void displayLibraryItems(Library library) {
+        library.displayAllItems();
+    }
+
+    // Method to display all patrons
+    private static void displayPatrons(Library library) {
+        library.displayAllPatrons();
     }
 }
