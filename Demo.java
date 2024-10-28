@@ -129,4 +129,34 @@ public class Demo {
 
         System.out.println(" Patron Added Successfully! ");
     }
+
+    // Method to borrow an item
+    private static void borrowItem(Library library, Scanner scanner) {
+        System.out.print(" Enter The Title Of The Item To Borrow: ");
+        String title = scanner.nextLine();
+        System.out.print(" Enter The Patron's Name: ");
+        String patronName = scanner.nextLine();
+
+        Patron patron = library.getPatronByName(patronName);  // Assuming a method to get a patron by name
+        if (patron != null) {
+            library.borrowedItem(title, patron);
+        } else {
+            System.out.println(" Patron Not Found? ");
+        }
+    }
+
+    // Method to return an item
+    private static void returnItem(Library library, Scanner scanner) {
+        System.out.print(" Enter The Title Of The Item To Return: ");
+        String title = scanner.nextLine();
+        System.out.print(" Enter the patron's name: ");
+        String patronName = scanner.nextLine();
+
+        Patron patron = library.getPatronByName(patronName);  // Assuming a method to get a patron by name
+        if (patron != null) {
+            library.returnItem(title, patron);
+        } else {
+            System.out.println(" Patron not found? ");
+        }
+    }
 }
