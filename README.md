@@ -48,7 +48,7 @@ If you encounter any issues, here are some common solutions:
 
 - Java Not Recognized: Ensure the JDK is correctly installed and added to your system’s PATH.
 - Compilation Errors: Confirm that file paths in the compilation command match your project structure.
-- IDE Build Errors: Verify that your IDE is configured with the correct JDK version and has src marked as a source folder.
+- IDE Build Errors: Verify that your IDE is configured with the correct JDK version
 ##
 ### License
 This project is licensed under the MIT License. See the LICENSE file for more information.
