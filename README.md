@@ -1,6 +1,6 @@
 ## Sprint-1-Java
 
-# 📚 Library Management System 📚
+# Library Management System
 The Library Management System is a command-line application developed in Java, designed to help libraries manage their inventory, patrons, and operations like borrowing and returning items.
 ##
 ### Features
@@ -9,30 +9,7 @@ The Library Management System is a command-line application developed in Java, d
 - Borrowing & Returning: Borrow and return library items.
 - User-Friendly Interface: Simple menu-driven interface for ease of use.
 ##
-### Prerequisites
-Before you begin, ensure you have met the following requirements:
-- Java Development Kit (JDK): Version 8 or later. [Download JDK](https://www.oracle.com/java/technologies/downloads/?er=221886)
-- Git: For version control and cloning (optional). [Download Git](https://git-scm.com/downloads)
-- IDE (optional but recommended): Visual Studio Code, IntelliJ IDEA, or Eclipse.
-##
-### Installation
-1. Clone The Repository
-Clone this repostitory or download it as a ZIP and extract it.
-`git clone <repository-url>`
-`cd LibraryManagementSystem`
----
-2. Open the Project in an IDE (Optional)
-If you’re using an IDE, open the project folder for easier development and execution.
----
-3. Compile the Application
-Open a terminal in the project root and compile the code:
-`javac -d bin -sourcepath src src/App/Demo.java1`
-This command compiles Demo.java and its dependencies, storing the compiled .class files in the bin directory.
----
-4. Run the Application
-After compiling, execute the application using the command below:
-`java -cp bin App.Demo1`
-##
+
 ### Available Commands
 1. Add Library Item: Adds a new item (e.g., book or periodical) to the library.
 2. Add Author: Registers a new author in the system.
